@@ -10,6 +10,7 @@ A modern TypeScript backend starter with Express.js, Prisma ORM, and PostgreSQL.
 - 🐘 **PostgreSQL** - Powerful, open source database
 - 🐳 **Docker** - Containerized development environment
 - 📝 **Morgan** - HTTP request logger middleware
+- 🌱 **Database Seeding** - Easy database population with sample data
 
 ## Prerequisites
 
@@ -51,6 +52,11 @@ A modern TypeScript backend starter with Express.js, Prisma ORM, and PostgreSQL.
    npm run prisma:migrate
    ```
 
+7. **Seed the database (optional)**
+   ```bash
+   npm run seed
+   ```
+
 ## Development
 
 - **Start development server**: `npm run dev`
@@ -63,12 +69,16 @@ A modern TypeScript backend starter with Express.js, Prisma ORM, and PostgreSQL.
 - **Generate Prisma client**: `npm run prisma:generate`
 - **Run migrations**: `npm run prisma:migrate`
 - **Open Prisma Studio**: `npm run prisma:studio`
+- **Seed database**: `npm run seed`
 
 ## Project Structure
 
 ```
 ├── src/
 │   ├── index.ts          # Main application entry point
+│   ├── lib/              # Utility libraries
+│   │   ├── prisma.ts     # Prisma client instance
+│   │   └── seed.ts       # Database seeding script
 │   └── generated/        # Generated Prisma client
 ├── prisma/
 │   └── schema.prisma     # Database schema
