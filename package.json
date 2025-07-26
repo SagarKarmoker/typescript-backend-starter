@@ -10,7 +10,8 @@
     "dev": "nodemon src/index.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio"
+    "prisma:studio": "prisma studio",
+    "seed": "ts-node src/lib/seed.ts"
   },
   "keywords": [],
   "author": "",
